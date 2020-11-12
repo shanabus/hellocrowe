@@ -27,3 +27,10 @@ Open http://localhost:5000/swagger/index.html and use the Swagger UI to test the
 
 ## Tests
 
+Navigate to the Test folder and run:
+
+```
+dotnet test
+```
+
+For more verbosity use a switch like `-v n`

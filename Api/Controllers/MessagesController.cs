@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using HelloCrowe.Services;
 
-namespace Api.Controllers
+namespace HelloCrowe.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -27,6 +27,14 @@ namespace Api.Controllers
             var message = _messageService.GetMessage();
 
             return Ok(message);
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] string message)
+        {
+            _messageService.SendMessage(message);
+
+            return Ok();
         }
     }
 }
