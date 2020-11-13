@@ -27,7 +27,7 @@ namespace HelloCrowe.Api
         {
             ConfigureServices(services);
 
-            services.Configure<FileSourceInfo>(Configuration.GetSection(nameof(FileSourceInfo)));
+            services.Configure<MessageSource>(Configuration.GetSection(nameof(MessageSource)));
 
             services.AddSingleton<IMessageRepository, FileBasedMessageRepository>();
         }

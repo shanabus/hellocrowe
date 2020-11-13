@@ -10,6 +10,12 @@ Navigate to the Console App and run:
 ```
 dotnet run
 ```
+Without an ASPNETCORE_ENVIRONMENT set, the console app will use default settings.  You can change this by specifying an environment variable in Powershell:
+
+```
+$Env:ASPNETCORE_ENVIRONMENT = "staging"   
+```
+Now run `dotnet run` again and you should see that Staging variables from appsettings.staging.json are used.
 
 ## API
 Navigate to the Api folder and run:

@@ -6,9 +6,9 @@ namespace HelloCrowe.Core
 {
     public class FileBasedMessageRepository : IMessageRepository
     {
-        private readonly FileSourceInfo _fileInfo;
+        private readonly MessageSource _fileInfo;
 
-        public FileBasedMessageRepository(IOptions<FileSourceInfo> fileInfo)
+        public FileBasedMessageRepository(IOptions<MessageSource> fileInfo)
         {
             _fileInfo = fileInfo.Value;
         }
