@@ -1,4 +1,5 @@
 using HelloCrowe.Core;
+using HelloCrowe.Core.Models;
 using HelloCrowe.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,25 @@ namespace HelloCrowe.Api
 
         public IConfiguration Configuration { get; }
 
+        // This method is called in the Production environment
+        public void ConfigureProductionServices(IServiceCollection services)
+        {
+            ConfigureServices(services);
+
+            services.Configure<FileSourceInfo>(Configuration.GetSection(nameof(FileSourceInfo)));
+
+            services.AddSingleton<IMessageRepository, FileBasedMessageRepository>();
+        }
+
+        // This method is called in the Development environment
+        public void ConfigureDevelopmentServices(IServiceCollection services)
+        {
+            ConfigureServices(services);
+
+            services.AddSingleton<IMessageRepository, MessageRepository>();
+        
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -31,7 +51,6 @@ namespace HelloCrowe.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1" });
             });
 
-            services.AddSingleton<IMessageRepository, MessageRepository>();
             services.AddSingleton<IMessageService, MessageService>();
         }
 

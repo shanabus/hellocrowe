@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace HelloCrowe.Core
+﻿namespace HelloCrowe.Core
 {
     public interface IMessageRepository
     {
-        string[] Get();
+        string Get();
 
         void Set(string message);
     }

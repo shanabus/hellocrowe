@@ -1,4 +1,3 @@
-using System.Linq;
 using HelloCrowe.Core;
 
 namespace HelloCrowe.Services
@@ -14,12 +13,12 @@ namespace HelloCrowe.Services
 
         public string GetMessage() 
         {
-            return _messageRepository.Get().FirstOrDefault();
+            return _messageRepository.Get();
         }
 
         public void SendMessage(string message)
         {
-
+            _messageRepository.Set(message);
         }
     }
 }

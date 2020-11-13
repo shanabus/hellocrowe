@@ -27,6 +27,17 @@ namespace HelloCrowe.Tests.Api
             var result = (OkObjectResult)controller.Get();
 
             Assert.AreEqual(result.Value, "Hello World");
+            Assert.AreEqual(result.StatusCode, 200);
+        }
+
+        [Test]
+        public void When_Post()
+        {
+            var controller = new MessagesController(null, _messageService);
+
+            var result = (OkResult)controller.Post("sample message");
+
+            Assert.AreEqual(result.StatusCode, 200);
         }
     }
 }

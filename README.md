@@ -24,6 +24,12 @@ Then open a browser or point a rest client to http://localhost:5000/api/messages
 
 Open http://localhost:5000/swagger/index.html and use the Swagger UI to test the Messages API
 
+To try out an alternate configuration where the service layer injects the file-based repository, run the command with the launch profile "Api-Filebased". This works because the environment-specific `Configure...` methods respect the configuration mapped in the launchSettings.json file.
+
+```
+dotnet run --launch-profile "Api-FileBased"
+```
+
 
 ## Tests
 

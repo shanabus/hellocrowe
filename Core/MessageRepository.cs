@@ -1,16 +1,18 @@
-
 namespace HelloCrowe.Core
 {
     public class MessageRepository : IMessageRepository
     {
-        public string[] Get() 
+        private string _message = "Hello World";
+
+        // While this is currently a static repository, it could easily be a facade for EF or similar ORM
+        public string Get() 
         {
-            return new string[] { "Hello World" };
+            return _message;
         }
 
         public void Set(string message)
         {
-
+            _message = message;
         }
     }
 }
