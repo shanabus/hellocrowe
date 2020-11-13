@@ -4,7 +4,7 @@
 A sample .NET 5 app stack using an "Onion Architecture".
 
 ## Getting Started
-Clone repository and make sure you have [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0) installed.
+Download or clone repository and make sure you have [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0) installed.  I used Visual Studio Code and the powershell terminal to scaffold and test most of the application.  A recent version of Visual Studio or Rider should also work.
 
 ## Console App
 Navigate to the ConsoleApp and run:
