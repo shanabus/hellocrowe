@@ -1,3 +1,5 @@
+![.NET Core](https://github.com/shanabus/hellocrowe/workflows/.NET%20Core/badge.svg)
+
 # Hello Crowe
 A sample .NET 5 app stack using an "Onion Architecture".
 
