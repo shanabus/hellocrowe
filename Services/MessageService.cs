@@ -16,7 +16,7 @@ namespace HelloCrowe.Services
             return _messageRepository.Get();
         }
 
-        public void SendMessage(string message)
+        public void SetMessage(string message)
         {
             _messageRepository.Set(message);
         }

@@ -33,8 +33,6 @@ namespace HelloCrowe.ConsoleApp
 
             var messageSource = new MessageSource();
             config.GetSection("MessageSource").Bind(messageSource);
-
-            Console.WriteLine($"Are we using file system messages? {messageSource.UseFiles}");
             
             if (messageSource.UseFiles)
             {

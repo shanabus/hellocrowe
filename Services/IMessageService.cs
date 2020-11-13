@@ -6,6 +6,6 @@ namespace HelloCrowe.Services
     {
         string GetMessage();
 
-        void SendMessage(string message);
+        void SetMessage(string message);
     }
 }

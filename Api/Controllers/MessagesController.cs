@@ -32,7 +32,7 @@ namespace HelloCrowe.Api.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] string message)
         {
-            _messageService.SendMessage(message);
+            _messageService.SetMessage(message);
 
             return Ok();
         }
