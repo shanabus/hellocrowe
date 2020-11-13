@@ -1,11 +1,11 @@
 # Hello Crowe
-A sample .NET 5 app stack
+A sample .NET 5 app stack using an "Onion Architecture".
 
 ## Getting Started
-Clone repository and make sure you have [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0) installed
+Clone repository and make sure you have [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0) installed.
 
 ## Console App
-Navigate to the Console App and run:
+Navigate to the ConsoleApp and run:
 
 ```
 dotnet run

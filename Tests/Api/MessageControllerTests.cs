@@ -20,7 +20,7 @@ namespace HelloCrowe.Tests.Api
         }
 
         [Test]
-        public void When_Get()
+        public void When_Get_Using_Default_Repository()
         {
             var controller = new MessagesController(null, _messageService);
 
@@ -31,7 +31,7 @@ namespace HelloCrowe.Tests.Api
         }
 
         [Test]
-        public void When_Post()
+        public void When_Post_Using_Default_Repository()
         {
             var controller = new MessagesController(null, _messageService);
 
