@@ -20,4 +20,7 @@
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <None Update="Assets/message.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>
